@@ -34,7 +34,7 @@ function Check-TextBoxOnClick(){
 
         if(Test-Connection -ComputerName $TextBoxContents -count 2 -quiet){
 
-            cmd /c shutdown /m \$TextBoxContents /r /t 00
+            cmd /c shutdown /m \\$TextBoxContents /r /t 00
 
         }
         else{
