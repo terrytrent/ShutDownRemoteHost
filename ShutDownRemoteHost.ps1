@@ -60,6 +60,7 @@ $mainform = [Windows.Markup.XamlReader]::Load($xamlReader)
 $tb_RemoteHost=$mainform.FindName('tb_RemoteHost')
 $btn_Restart=$mainform.FindName('btn_Restart')
 
+$tb_RemoteHost.add_KeyUp({if($_.key -eq "Enter"){Check-TextBoxOnClick}})
 $btn_Restart.Add_Click({Check-TextBoxOnClick})
 
 # Show the form
