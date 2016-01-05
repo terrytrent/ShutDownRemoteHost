@@ -1,7 +1,7 @@
 <Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Title="Restart Remote computer" Width="330" Height="148">
 	<Grid Name="LayoutRoot">
 		<TextBox Name="tb_RemoteHost" HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="Remote Computer IP or Name" VerticalAlignment="Top" Width="302"/>
-		<Button Name="btn_ShutDown" Content="Restart" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="302" Height="70" FontSize="32" FontWeight="Bold">
+		<Button Name="btn_Restart" Content="Restart" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="302" Height="70" FontSize="32" FontWeight="Bold">
 			<Button.Background>
 				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
 					<GradientStop Color="#FFFFAEAE" Offset="0"/>

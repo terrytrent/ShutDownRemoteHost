@@ -34,7 +34,7 @@ function Check-TextBoxOnClick(){
 
         if(Test-Connection -ComputerName $TextBoxContents -count 2 -quiet){
 
-            write-host cmd /c shutdown /m \\$TextBoxContents /r /t 00
+            cmd /c shutdown /m \\$TextBoxContents /r /t 00
             New-MessageBox -message "Restart command sent" -title "Command Sent" -icon Information -buttons OK
 
         }
@@ -58,9 +58,9 @@ $mainform = [Windows.Markup.XamlReader]::Load($xamlReader)
 
 # Define Form Elements
 $tb_RemoteHost=$mainform.FindName('tb_RemoteHost')
-$btn_ShutDown=$mainform.FindName('btn_ShutDown')
+$btn_Restart=$mainform.FindName('btn_Restart')
 
-$btn_ShutDown.Add_Click({Check-TextBoxOnClick})
+$btn_Restart.Add_Click({Check-TextBoxOnClick})
 
 # Show the form
 [void]$mainform.ShowDialog()
