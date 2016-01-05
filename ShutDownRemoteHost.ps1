@@ -34,7 +34,8 @@ function Check-TextBoxOnClick(){
 
         if(Test-Connection -ComputerName $TextBoxContents -count 2 -quiet){
 
-            cmd /c shutdown /m \\$TextBoxContents /r /t 00
+            write-host cmd /c shutdown /m \\$TextBoxContents /r /t 00
+            New-MessageBox -message "Restart command sent" -title "Command Sent" -icon Information -buttons OK
 
         }
         else{
